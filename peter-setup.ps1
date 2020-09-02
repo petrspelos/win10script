@@ -28,11 +28,19 @@
 $tweaks = @(
 	### Require administrator privileges ###
 	"RequireAdmin",
-  "CreateRestorePoint",
+
 	### External Program Setup
 	"InstallTitusProgs", #REQUIRED FOR OTHER PROGRAM INSTALLS!
 	"Install7Zip",
-	"InstallNotepadplusplus",
+	"InstallDotNetCore",
+	"InstallVisualStudioCode",
+	"InstallVisualStudioCommunity",
+	"InstallGit",
+	"InstallWindowsTerminal",
+	"InstallGeForceExperience",
+	"InstallSteam",
+	"InstallSpotify",
+	"InstallKeePassXC",
 
 	### Windows Apps
 	"DebloatAll",
@@ -58,22 +66,22 @@ $tweaks = @(
 
 	### Security Tweaks ###
 	"SetUACLow",                  # "SetUACHigh",
-	# "EnableSharingMappedDrives",  # "DisableSharingMappedDrives",
-	# "DisableAdminShares",           # "EnableAdminShares",
+	"DisableSharingMappedDrives",
+	"DisableAdminShares",           # "EnableAdminShares",
 	"DisableSMB1",                # "EnableSMB1",
-	# "DisableSMBServer",           # "EnableSMBServer",
-	# "DisableLLMNR",               # "EnableLLMNR",
+	"DisableSMBServer",           # "EnableSMBServer",
+	"DisableLLMNR",               # "EnableLLMNR",
 	"SetCurrentNetworkPrivate",     # "SetCurrentNetworkPublic",
 	"SetUnknownNetworksPrivate",  # "SetUnknownNetworksPublic",
 	"DisableNetDevicesAutoInst",  # "EnableNetDevicesAutoInst",
 	"DisableCtrldFolderAccess",	# "EnableCtrldFolderAccess",
-	"EnableFirewall",
-	"EnableDefender",
-	"EnableDefenderCloud",
+	"DisableFirewall",            # "EnableFirewall",
+	"DisableDefender",            # "EnableDefender",
+	"DisableDefenderCloud",       # "EnableDefenderCloud",
 	"EnableF8BootMenu",             # "DisableF8BootMenu",
 	#"SetDEPOptOut",                 # "SetDEPOptIn",
-	# "EnableCIMemoryIntegrity",    # "DisableCIMemoryIntegrity",
-	#"DisableScriptHost",            # "EnableScriptHost",
+	"DisableCIMemoryIntegrity",
+	"DisableScriptHost",            # "EnableScriptHost",
 	#"EnableDotNetStrongCrypto",     # "DisableDotNetStrongCrypto",
 	"DisableMeltdownCompatFlag", # "EnableMeltdownCompatFlag"    
 
@@ -84,13 +92,13 @@ $tweaks = @(
 	"DisableHomeGroups",          # "EnableHomeGroups",
 	"DisableSharedExperiences",     # "EnableSharedExperiences",
 	"DisableRemoteAssistance",      # "EnableRemoteAssistance",
-	"EnableRemoteDesktop",          # "DisableRemoteDesktop",
+	"DisableRemoteDesktop",
 	"DisableAutoplay",              # "EnableAutoplay",
 	"DisableAutorun",               # "EnableAutorun",
 	"DisableStorageSense",        # "EnableStorageSense",
 	"DisableDefragmentation",     # "EnableDefragmentation",
 	"DisableSuperfetch",          # "EnableSuperfetch",
-	"EnableIndexing",
+	"DisableIndexing",            # "EnableIndexing",
 	"SetBIOSTimeUTC",             # "SetBIOSTimeLocal",
 	"DisableHibernation",		# "EnableHibernation",          # 
 	"EnableSleepButton",		# "DisableSleepButton",         
@@ -107,12 +115,12 @@ $tweaks = @(
 	"ShowTaskManagerDetails"        # "HideTaskManagerDetails",
 	"ShowFileOperationsDetails",    # "HideFileOperationsDetails",
 	"DisableFileDeleteConfirm",	# "EnableFileDeleteConfirm",    
-	#"HideTaskbarSearch",
-	"ShowTaskbarSearchIcon",      # "ShowTaskbarSearchBox",
+	"HideTaskbarSearch",
+	#"ShowTaskbarSearchIcon",      # "ShowTaskbarSearchBox",
 	"HideTaskView",                 # "ShowTaskView",
 	# "ShowSmallTaskbarIcons",        # "ShowLargeTaskbarIcons",
 	# "SetTaskbarCombineWhenFull",    # "SetTaskbarCombineNever",     # "SetTaskbarCombineAlways",
-	# "HideTaskbarPeopleIcon",        # "ShowTaskbarPeopleIcon",
+	"HideTaskbarPeopleIcon",        # "ShowTaskbarPeopleIcon",
 	"ShowTrayIcons",                # "HideTrayIcons",
 	"DisableSearchAppInStore",      # "EnableSearchAppInStore",
 	"DisableNewAppPrompt",          # "EnableNewAppPrompt",
@@ -125,7 +133,7 @@ $tweaks = @(
 
 	### Explorer UI Tweaks ###
 	"ShowKnownExtensions",          # "HideKnownExtensions",
-	"HideHiddenFiles",
+	# "ShowHiddenFiles",              # "HideHiddenFiles",
 	"HideSyncNotifications"         # "ShowSyncNotifications",
 	"HideRecentShortcuts",          # "ShowRecentShortcuts",
 	"SetExplorerThisPC",            # "SetExplorerQuickAccess",
@@ -149,22 +157,23 @@ $tweaks = @(
 	# "DisableThumbsDB",              # "EnableThumbsDB",
 
 	### Application Tweaks ###
-  "EnableOneDrive",
+	"DisableOneDrive",              # "EnableOneDrive",
+	"UninstallOneDrive",            # "InstallOneDrive",
 	"UninstallMsftBloat",           # "InstallMsftBloat",
 	"UninstallThirdPartyBloat",     # "InstallThirdPartyBloat",
-	# "UninstallWindowsStore",      # "InstallWindowsStore",
-	# "DisableXboxFeatures",          # "EnableXboxFeatures",
+	"UninstallWindowsStore",      # "InstallWindowsStore",
+	"DisableXboxFeatures",          # "EnableXboxFeatures",
 	"DisableAdobeFlash",            # "EnableAdobeFlash",
 	"InstallMediaPlayer", 		# "UninstallMediaPlayer",
 	"UninstallInternetExplorer",  # "InstallInternetExplorer",
 	"UninstallWorkFolders",       # "InstallWorkFolders",
 	"InstallLinuxSubsystem",      # "UninstallLinuxSubsystem",
-	# "InstallHyperV",              # "UninstallHyperV",
+	"UninstallHyperV",
 	"SetPhotoViewerAssociation",    # "UnsetPhotoViewerAssociation",
 	"AddPhotoViewerOpenWith",       # "RemovePhotoViewerOpenWith",
-	"InstallPDFPrinter"		# "UninstallPDFPrinter",
-	# "UninstallXPSPrinter",          # "InstallXPSPrinter",
-	# "RemoveFaxPrinter",             # "AddFaxPrinter",
+	"InstallPDFPrinter",		# "UninstallPDFPrinter",
+	"UninstallXPSPrinter",          # "InstallXPSPrinter",
+	"RemoveFaxPrinter",             # "AddFaxPrinter",
 
 	### Server Specific Tweaks ###
 	# "HideServerManagerOnLogin",   # "ShowServerManagerOnLogin",
@@ -175,8 +184,8 @@ $tweaks = @(
 	# "EnableAudio",                # "DisableAudio",
 
 	### Unpinning ###
-	#"UnpinStartMenuTiles",
-	#"UnpinTaskbarIcons",
+	"UnpinStartMenuTiles",
+	"UnpinTaskbarIcons"
 
 	### Auxiliary Functions ###
 )
@@ -219,6 +228,55 @@ Function InstallNotepadplusplus {
 Function InstallMediaPlayerClassic {
 	Write-Output "Installing Media Player Classic (VLC Alternative)"
 	choco install mpc-hc -y
+}
+
+#########
+# Recommended Peter Programs
+#########
+
+Function InstallDotNetCore {
+	Write-Output "Installing latest stable .NET Core SDK"
+	choco install dotnetcore
+}
+
+Function InstallVisualStudioCode {
+	Write-Output "Installing Visual Studio Code"
+	choco install vscode
+}
+
+Function InstallVisualStudioCommunity {
+	Write-Output "Installing Visual Studio Community"
+	choco install visualstudio2019community
+}
+
+Function InstallGit {
+	Write-Output "Installing Git"
+	choco install git
+}
+
+Function InstallWindowsTerminal {
+	Write-Output "Installing Windows Terminal"
+	choco install microsoft-windows-terminal
+}
+
+Function InstallGeForceExperience {
+	Write-Output "Installing GeForce Experience"
+	choco install geforce-experience
+}
+
+Function InstallSteam {
+	Write-Output "Installing Steam"
+	choco install steam
+}
+
+Function InstallSpotify {
+	Write-Output "Installing Spotify"
+	choco install spotify
+}
+
+Function InstallKeePassXC {
+	Write-Output "Installing KeePass XC"
+	choco install keepassxc
 }
 
 ##########
@@ -1938,9 +1996,12 @@ Function UninstallMsftBloat {
 	Get-AppxPackage "Microsoft.Getstarted" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.Messaging" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.Microsoft3DViewer" | Remove-AppxPackage
+	Get-AppxPackage "Microsoft.MicrosoftOfficeHub" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.MicrosoftPowerBIForWindows" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.MicrosoftSolitaireCollection" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.MicrosoftStickyNotes" | Remove-AppxPackage
+	Get-AppxPackage "Microsoft.MinecraftUWP" | Remove-AppxPackage
+	Get-AppxPackage "Microsoft.MSPaint" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.NetworkSpeedTest" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.Office.OneNote" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.Office.Sway" | Remove-AppxPackage
@@ -1948,6 +2009,7 @@ Function UninstallMsftBloat {
 	Get-AppxPackage "Microsoft.People" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.Print3D" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.RemoteDesktop" | Remove-AppxPackage
+	Get-AppxPackage "Microsoft.SkypeApp" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.Wallet" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.WindowsAlarms" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.WindowsCamera" | Remove-AppxPackage
@@ -1977,12 +2039,14 @@ Function InstallMsftBloat {
 	Get-AppxPackage -AllUsers "Microsoft.Getstarted" | ForEach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
 	Get-AppxPackage -AllUsers "Microsoft.Messaging" | ForEach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
 	Get-AppxPackage -AllUsers "Microsoft.Microsoft3DViewer" | ForEach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
+	Get-AppxPackage -AllUsers "Microsoft.MicrosoftOfficeHub" | ForEach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
 	Get-AppxPackage -AllUsers "Microsoft.MicrosoftPowerBIForWindows" | ForEach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
 	Get-AppxPackage -AllUsers "Microsoft.MicrosoftSolitaireCollection" | ForEach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
 	Get-AppxPackage -AllUsers "Microsoft.MicrosoftStickyNotes" | ForEach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
 	Get-AppxPackage -AllUsers "Microsoft.MinecraftUWP" | ForEach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
 	Get-AppxPackage -AllUsers "Microsoft.MSPaint" | ForEach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
 	Get-AppxPackage -AllUsers "Microsoft.NetworkSpeedTest" | ForEach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
+	Get-AppxPackage -AllUsers "Microsoft.Office.OneNote" | ForEach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
 	Get-AppxPackage -AllUsers "Microsoft.Office.Sway" | ForEach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
 	Get-AppxPackage -AllUsers "Microsoft.OneConnect" | ForEach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
 	Get-AppxPackage -AllUsers "Microsoft.People" | ForEach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
@@ -2503,12 +2567,6 @@ Function Stop-EdgePDF {
     }
 }
 
-Function CreateRestorePoint {
-  Write-Output "Creating Restore Point incase something bad happens"
-  Enable-ComputerRestore -Drive "C:\"
-  Checkpoint-Computer -Description "RestorePoint1" -RestorePointType "MODIFY_SETTINGS"
-}
-
 Function DebloatAll {
 
     $Bloatware = @(
@@ -2560,9 +2618,9 @@ Function DebloatAll {
         #Optional: Typically not removed but you can if you need to for some reason
         #"*Microsoft.Advertising.Xaml_10.1712.5.0_x64__8wekyb3d8bbwe*"
         #"*Microsoft.Advertising.Xaml_10.1712.5.0_x86__8wekyb3d8bbwe*"
-        #"*Microsoft.BingWeather*"
+        "*Microsoft.BingWeather*"
         #"*Microsoft.MSPaint*"
-        #"*Microsoft.MicrosoftStickyNotes*"
+        "*Microsoft.MicrosoftStickyNotes*"
         #"*Microsoft.Windows.Photos*"
         #"*Microsoft.WindowsCalculator*"
         #"*Microsoft.WindowsStore*"
