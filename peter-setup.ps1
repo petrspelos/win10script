@@ -41,6 +41,9 @@ $tweaks = @(
 	"InstallSteam",
 	"InstallSpotify",
 	"InstallKeePassXC",
+	"InstallFirefox",
+	"InstallGimp",
+	"InstallDiscord",
 
 	### Windows Apps
 	"DebloatAll",
@@ -277,6 +280,21 @@ Function InstallSpotify {
 Function InstallKeePassXC {
 	Write-Output "Installing KeePass XC"
 	choco install keepassxc
+}
+
+Function InstallFirefox {
+	Write-Output "Installing Firefox"
+	choco install firefox
+}
+
+Function InstallGimp {
+	Write-Output "Installing Gimp"
+	choco install gimp
+}
+
+Function InstallDiscord {
+	Write-Output "Installing Discord"
+	choco install discord
 }
 
 ##########

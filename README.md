@@ -13,6 +13,9 @@ My own fork of the Ultimate Windows 10 Script.
 - Install Steam
 - Install Spotify
 - Install KeePass XC
+- Install Firefox
+- Install GIMP
+- Install Discord
 
 ## To run
 
