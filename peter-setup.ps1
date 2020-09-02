@@ -44,6 +44,7 @@ $tweaks = @(
 	"InstallFirefox",
 	"InstallGimp",
 	"InstallDiscord",
+	"InstallOBS",
 
 	### Windows Apps
 	"DebloatAll",
@@ -295,6 +296,11 @@ Function InstallGimp {
 Function InstallDiscord {
 	Write-Output "Installing Discord"
 	choco install discord
+}
+
+Function InstallOBS {
+	Write-Output "Installing OBS"
+	choco install obs-studio
 }
 
 ##########
