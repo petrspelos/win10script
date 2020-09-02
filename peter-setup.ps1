@@ -240,67 +240,67 @@ Function InstallMediaPlayerClassic {
 
 Function InstallDotNetCore {
 	Write-Output "Installing latest stable .NET Core SDK"
-	choco install dotnetcore
+	choco install dotnetcore -y
 }
 
 Function InstallVisualStudioCode {
 	Write-Output "Installing Visual Studio Code"
-	choco install vscode
+	choco install vscode -y
 }
 
 Function InstallVisualStudioCommunity {
 	Write-Output "Installing Visual Studio Community"
-	choco install visualstudio2019community
+	choco install visualstudio2019community -y
 }
 
 Function InstallGit {
 	Write-Output "Installing Git"
-	choco install git
+	choco install git -y
 }
 
 Function InstallWindowsTerminal {
 	Write-Output "Installing Windows Terminal"
-	choco install microsoft-windows-terminal
+	choco install microsoft-windows-terminal -y
 }
 
 Function InstallGeForceExperience {
 	Write-Output "Installing GeForce Experience"
-	choco install geforce-experience
+	choco install geforce-experience -y
 }
 
 Function InstallSteam {
 	Write-Output "Installing Steam"
-	choco install steam
+	choco install steam -y
 }
 
 Function InstallSpotify {
 	Write-Output "Installing Spotify"
-	choco install spotify
+	choco install spotify -y
 }
 
 Function InstallKeePassXC {
 	Write-Output "Installing KeePass XC"
-	choco install keepassxc
+	choco install keepassxc -y
 }
 
 Function InstallFirefox {
 	Write-Output "Installing Firefox"
-	choco install firefox
+	choco install firefox -y
 }
 
 Function InstallGimp {
 	Write-Output "Installing Gimp"
-	choco install gimp
+	choco install gimp -y
 }
 
 Function InstallDiscord {
 	Write-Output "Installing Discord"
-	choco install discord
+	choco install discord -y
 }
 
 Function InstallOBS {
 	Write-Output "Installing OBS"
-	choco install obs-studio
+	choco install obs-studio -y
 }
 
 ##########
